@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,#5e7e6c, #6bc17f, #a7cc37);
+   
+}
+
+.container {
+    display: flex; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+.container-title{
+    font-size:25px;
+    text-align:center;
+    margin:0 0 30px 0;
+    color:white;
+    text-shadow: 3px 1px black;
+}
+
+.contact-form {
+    flex: 1; /* Take up half of the container */
+    background-image: linear-gradient(to right,#0095ff, #00d9ff, #88f5f1);
+    padding: 20px;
+    border-right: 2px solid #ddd; /* divider between sections */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.registrationList {
+    flex: 1; /* Take up the other half of the container */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-image: linear-gradient(to right,#bd07fa, #fb00ff, #f600c1);
+}
+
+h1 {
+    text-align: center;
+}
+input[type="text"],
+input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+button {
+    background-color: #007BFF; 
+    color: white;
+    cursor: pointer;
+    padding: 15px 42px; 
+    font-size: 14px; 
+    border: none; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #a1c3e7; 
+    scale: 1.1;
+}
+
+.itemall {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.trash-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.edit-button{
+    background-color: transparent;
+}
+.edit-button i{
+    
+    color: green;
+}
+
+.trash-button i {
+    color: red; 
+}
+.edit-button:hover,
+.trash-button:hover{
+    background-color: transparent;
+    scale:1.5;
+}
+
+
