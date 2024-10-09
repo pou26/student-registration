@@ -33,7 +33,7 @@ function addregistrationListItem(event) {
         email: email.value,
 
     };
-
+   
     if (!validateInputs(student)) return; // Validate inputs
 
     // Create a new student entry
@@ -89,10 +89,37 @@ function clearInputs() {
     email.value='';
 }
 
+
 function validateInputs(student) {
     const idPattern = /^[0-9]+$/; // Only numbers
     const namePattern = /^[A-Za-z\s]+$/; // Only characters
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; //email regex
+
+        // Validate for empty fields
+        if (!student.name.trim()) {
+            alert("Name cannot be empty!");
+            return false;
+        }
+        if (!student.id.trim()) {
+            alert("Student ID cannot be empty!");
+            return false;
+        }
+        if (!student.class.trim()) {
+            alert("Class cannot be empty!");
+            return false;
+        }
+        if (!student.roll.trim()) {
+            alert("Roll No cannot be empty!");
+            return false;
+        }
+        if (!student.contact.trim()) {
+            alert("Contact No cannot be empty!");
+            return false;
+        }
+        if (!student.email.trim()) {
+            alert("Email cannot be empty!");
+            return false;
+        }
 
     if (!namePattern.test(student.name)) {
         alert("Invalid name! Only characters are allowed.");
