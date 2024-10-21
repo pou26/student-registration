@@ -125,6 +125,11 @@ function validateInputs(student) {
         alert("Invalid name! Only characters are allowed.");
         return false;
     }
+
+    if (!idPattern.test(student.class)) {
+        alert("Invalid class! Only numbers are allowed.");
+        return false;
+    }
     if (!idPattern.test(student.id)) {
         alert("Invalid ID! Only numbers are allowed.");
         return false;
